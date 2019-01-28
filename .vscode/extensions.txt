@@ -1,0 +1,16 @@
+aaron-bond.better-comments
+azaugg.vscode-python-docstring
+CoenraadS.bracket-pair-colorizer
+dbaeumer.vscode-eslint
+eamodio.gitlens
+eg2.tslint
+etmoffat.pip-packages
+HookyQR.beautify
+jakebathman.mysql-syntax
+jpoissonnier.vscode-styled-components
+ms-python.python
+ms-vscode.Theme-MaterialKit
+naumovs.color-highlight
+PKief.material-icon-theme
+streetsidesoftware.code-spell-checker
+vscodevim.vim
