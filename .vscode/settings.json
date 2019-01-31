@@ -40,6 +40,7 @@
 
   "editor.tokenColorCustomizations": {
     "textMateRules": [
+
        {
          "scope": [
              "string.quoted.docstring.multi",
@@ -51,6 +52,7 @@
            "foreground": "#616c82"
          }
        },
+
        {
          "scope": [
            "source.python",
@@ -61,6 +63,7 @@
            "foreground": "#dadada"
          }
        },
+
        {
          "scope": [
            "constant",
@@ -163,6 +166,7 @@
            "settings": {
              "fontStyle": ""
            }
+
        }
     ]
   }
