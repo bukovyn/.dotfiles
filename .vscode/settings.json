@@ -1,29 +1,43 @@
 {
-  "workbench.colorTheme": "Material Theme Ocean High Contrast",
   "editor.fontSize": 18,
   "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 99,
-  "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
-  "files.insertFinalNewline": true,
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.colorCustomizations": {
-      "editorCursor.background": "#0f111a",
-      "editorCursor.foreground": "#ffffff",
+  "editor.rulers": [92, 99],
+  "editor.tabSize": 2,
 
+  "files.exclude": {
+    "**/*.pyc": true
+	},
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.compact": false,
+  "gitlens.codeLens.authors.enabled": false,
+
+  "window.zoomLevel": 0,
+
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.iconTheme": "eq-material-theme-icons-ocean",
+
+  "workbench.colorCustomizations": {
       "editor.selectionHighlightBackground": "#1f2233",
       "editor.selectionHighlightBorder": "#ffffff",
-
-      "editorLineNumber.foreground": "#4c5566",
+      "editorCursor.background": "#0f111a",
+      "editorCursor.foreground": "#ffffff",
+      "editorGroup.border": "#616c82",
       "editorLineNumber.activeForeground": "#ffffff",
-
+      "editorLineNumber.foreground": "#4c5566",
       "sideBar.foreground": "#5f5f5f",
-
       "tab.activeForeground": "#ffffff",
-      "tab.inactiveForeground": "#dadada",
-
-      "editorGroup.border": "#616c82"
+      "tab.inactiveForeground": "#dadada"
   },
+
   "editor.tokenColorCustomizations": {
     "textMateRules": [
        {
@@ -151,12 +165,5 @@
            }
        }
     ]
-  },
-  "window.zoomLevel": 0,
-  "workbench.activityBar.visible": false,
-  "workbench.iconTheme": "eq-material-theme-icons-ocean",
-  "gitlens.blame.avatars": false,
-  "gitlens.blame.compact": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "editor.minimap.enabled": false
+  }
 }
