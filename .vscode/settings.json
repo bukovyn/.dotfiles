@@ -38,16 +38,16 @@
         }
       },
       {
-          "scope": "string.quoted.docstring.multi.python punctuation.definition.string.end.python",
-          "settings": {
-            "foreground": "#616c82"
-          }
+        "scope": "string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+        "settings": {
+          "foreground": "#616c82"
+        }
       },
       {
-          "scope": "string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
-          "settings": {
-            "foreground": "#616c82"
-          }
+        "scope": "string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+        "settings": {
+          "foreground": "#616c82"
+        }
       }
       {
         "scope": [
