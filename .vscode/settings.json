@@ -1,173 +1,180 @@
 {
-  "editor.fontSize": 18,
-  "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
-  "editor.minimap.maxColumn": 99,
-  "editor.rulers": [92, 99],
-  "editor.tabSize": 2,
-
-  "files.exclude": {
-    "**/*.pyc": true
+	"workbench.colorTheme": "Material Theme Ocean High Contrast",
+	"editor.fontSize": 18,
+	"editor.lineNumbers": "relative",
+	"editor.minimap.maxColumn": 99,
+	"files.trimTrailingWhitespace": true,
+	"files.trimFinalNewlines": true,
+	"files.insertFinalNewline": true,
+	"workbench.editor.highlightModifiedTabs": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.tabSize": "2",
+	"editor.rulers": [92, 99],
+	"editor.formatOnSave": false,
+	"workbench.colorCustomizations": {
+		"editorCursor.background": "#0f111a",
+		"editorCursor.foreground": "#ffffff",
+		"editor.selectionHighlightBackground": "#1f2233",
+		"editor.selectionHighlightBorder": "#ffffff",
+		"editorLineNumber.foreground": "#4c5566",
+		"editorLineNumber.activeForeground": "#ffffff",
+		"sideBar.foreground": "#5f5f5f",
+		"tab.activeForeground": "#ffffff",
+		"tab.inactiveForeground": "#dadada",
+		"editorGroup.border": "#616c82"
 	},
-
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-
-  "gitlens.blame.avatars": false,
-  "gitlens.blame.compact": false,
-  "gitlens.codeLens.authors.enabled": false,
-
-  "window.zoomLevel": 0,
-
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Material Theme Ocean High Contrast",
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.iconTheme": "eq-material-theme-icons-ocean",
-
-  "workbench.colorCustomizations": {
-      "editor.selectionHighlightBackground": "#1f2233",
-      "editor.selectionHighlightBorder": "#ffffff",
-      "editorCursor.background": "#0f111a",
-      "editorCursor.foreground": "#ffffff",
-      "editorGroup.border": "#616c82",
-      "editorLineNumber.activeForeground": "#ffffff",
-      "editorLineNumber.foreground": "#4c5566",
-      "sideBar.foreground": "#5f5f5f",
-      "tab.activeForeground": "#ffffff",
-      "tab.inactiveForeground": "#dadada"
-  },
-
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-
-       {
-         "scope": [
-             "string.quoted.docstring.multi",
-             "punctuation.definition.comment",
-             "comment.line",
-             "comment.block.js"
-         ],
-         "settings": {
-           "foreground": "#616c82"
-         }
-       },
-
-       {
-         "scope": [
-           "source.python",
-           "meta.function-call.arguments",
-           "constant.other.caps"
-         ],
-         "settings": {
-           "foreground": "#dadada"
-         }
-       },
-
-       {
-         "scope": [
-           "constant",
-           "constant.character",
-           "constant.character.escape",
-           "constant.numeric",
-           "constant.numeric.integer",
-           "constant.numeric.float",
-           "constant.numeric.hex",
-           "constant.numeric.octal",
-           "constant.other",
-           "constant.regexp",
-           "constant.rgb-value",
-           "emphasis",
-           "entity",
-           "entity.name",
-           "entity.name.class",
-           "entity.name.function",
-           "entity.name.method",
-           "entity.name.section",
-           "entity.name.selector",
-           "entity.name.tag",
-           "entity.name.type",
-           "entity.other",
-           "entity.other.attribute-name",
-           "entity.other.inherited-class",
-           "invalid",
-           "invalid.deprecated",
-           "invalid.illegal",
-           "keyword",
-           "keyword.control",
-           "keyword.operator",
-           "keyword.operator.new",
-           "keyword.operator.assignment",
-           "keyword.operator.arithmetic",
-           "keyword.operator.logical",
-           "keyword.other",
-           "markup",
-           "markup.bold",
-           "markup.changed",
-           "markup.deleted",
-           "markup.heading",
-           "markup.inline.raw",
-           "markup.inserted",
-           "markup.italic",
-           "markup.list",
-           "markup.list.numbered",
-           "markup.list.unnumbered",
-           "markup.other",
-           "markup.quote",
-           "markup.raw",
-           "markup.underline",
-           "markup.underline.link",
-           "meta",
-           "meta.block",
-           "meta.cast",
-           "meta.class",
-           "meta.function",
-           "meta.function-call",
-           "meta.preprocessor",
-           "meta.return-type",
-           "meta.selector",
-           "meta.tag",
-           "meta.type.annotation",
-           "meta.type",
-           "punctuation.definition.string.begin",
-           "punctuation.definition.string.end",
-           "punctuation.separator",
-           "punctuation.separator.continuation",
-           "punctuation.terminator",
-           "storage",
-           "storage.modifier",
-           "storage.type",
-           "string",
-           "string.interpolated",
-           "string.other",
-           "string.quoted",
-           "string.quoted.double",
-           "string.quoted.other",
-           "string.quoted.single",
-           "string.quoted.triple",
-           "string.regexp",
-           "string.unquoted",
-           "strong",
-           "support",
-           "support.class",
-           "support.constant",
-           "support.function",
-           "support.other",
-           "support.type",
-           "support.type.property-name",
-           "support.variable",
-           "variable",
-           "variable.language",
-           "variable.name",
-           "variable.other",
-           "variable.other.readwrite",
-           "variable.parameter"
-         ],
-           "settings": {
-             "fontStyle": ""
-           }
-
-       }
-    ]
-  }
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"string.quoted.docstring.multi",
+					"punctuation.definition.comment",
+					"comment.line",
+					"comment.block.js"
+				],
+				"settings": {
+					"foreground": "#616c82"
+				}
+			},
+	  	{
+					"scope": "string.quoted.docstring.multi.python punctuation.definition.string.end.python",
+					"settings": {
+						"foreground": "#616c82"
+					}
+			},
+			{
+					"scope": "string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
+					"settings": {
+						"foreground": "#616c82"
+					}
+			}
+			{
+				"scope": [
+					"source.python",
+					"meta.function-call.arguments",
+					"constant.other.caps"
+				],
+				"settings": {
+					"foreground": "#dadada"
+				}
+			},
+			{
+				"scope": [
+					"constant",
+					"constant.character",
+					"constant.character.escape",
+					"constant.numeric",
+					"constant.numeric.integer",
+					"constant.numeric.float",
+					"constant.numeric.hex",
+					"constant.numeric.octal",
+					"constant.other",
+					"constant.regexp",
+					"constant.rgb-value",
+					"emphasis",
+					"entity",
+					"entity.name",
+					"entity.name.class",
+					"entity.name.function",
+					"entity.name.method",
+					"entity.name.section",
+					"entity.name.selector",
+					"entity.name.tag",
+					"entity.name.type",
+					"entity.other",
+					"entity.other.attribute-name",
+					"entity.other.inherited-class",
+					"invalid",
+					"invalid.deprecated",
+					"invalid.illegal",
+					"keyword",
+					"keyword.control",
+					"keyword.operator",
+					"keyword.operator.new",
+					"keyword.operator.assignment",
+					"keyword.operator.arithmetic",
+					"keyword.operator.logical",
+					"keyword.other",
+					"markup",
+					"markup.bold",
+					"markup.changed",
+					"markup.deleted",
+					"markup.heading",
+					"markup.inline.raw",
+					"markup.inserted",
+					"markup.italic",
+					"markup.list",
+					"markup.list.numbered",
+					"markup.list.unnumbered",
+					"markup.other",
+					"markup.quote",
+					"markup.raw",
+					"markup.underline",
+					"markup.underline.link",
+					"meta",
+					"meta.block",
+					"meta.cast",
+					"meta.class",
+					"meta.function",
+					"meta.function-call",
+					"meta.preprocessor",
+					"meta.return-type",
+					"meta.selector",
+					"meta.tag",
+					"meta.type.annotation",
+					"meta.type",
+					"punctuation.definition.string.begin",
+					"punctuation.definition.string.end",
+					"punctuation.separator",
+					"punctuation.separator.continuation",
+					"punctuation.terminator",
+					"storage",
+					"storage.modifier",
+					"storage.type",
+					"string",
+					"string.interpolated",
+					"string.other",
+					"string.quoted",
+					"string.quoted.double",
+					"string.quoted.other",
+					"string.quoted.single",
+					"string.quoted.triple",
+					"string.regexp",
+					"string.unquoted",
+					"strong",
+					"support",
+					"support.class",
+					"support.constant",
+					"support.function",
+					"support.other",
+					"support.type",
+					"support.type.property-name",
+					"support.variable",
+					"variable",
+					"variable.language",
+					"variable.name",
+					"variable.other",
+					"variable.other.readwrite",
+					"variable.parameter"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
+	},
+	"window.zoomLevel": 0,
+	"workbench.activityBar.visible": false,
+	"workbench.iconTheme": "eq-material-theme-icons-ocean",
+	"gitlens.blame.avatars": false,
+	"gitlens.blame.compact": false,
+	"gitlens.codeLens.authors.enabled": false,
+	"editor.minimap.enabled": false,
+	"files.exclude": {
+		"**/*.pyc": true
+	},
+	"extensions.ignoreRecommendations": true,
+	"editor.renderWhitespace": "none",
+	"prettier.tslintIntegration": true
 }
