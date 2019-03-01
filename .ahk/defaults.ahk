@@ -32,7 +32,7 @@
     If ErrorLevel <> 0
 	    Process, Close, Code.exe
     Else
-	    Run "C:\Users\Naz\AppData\Local\Programs\Microsoft VS Code\Code.exe" -start-maximized
+	    Run "C:\Users\Naz\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 	    Return
 
 ; alt s - spotify
