@@ -48,7 +48,7 @@
         "settings": {
           "foreground": "#616c82"
         }
-      }
+      },
       {
         "scope": [
           "source.python",
