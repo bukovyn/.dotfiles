@@ -1,7 +1,7 @@
 set $mod Mod1
 
 # SETTINGS
-font Source Code Pro
+font pango: SourceCodeProMedium 12px
 
 client.focused #000000 #000000 #ffffff #000000 #000000
 client.focused_inactive #000000 #000000 #ffffff #000000 #000000
@@ -18,7 +18,7 @@ smart_gaps on
 # KEYBINDS
 bindsym $mod+Return exec --no-startup-id termite
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec --no-startup-id dmenu_run -nb "#000000" -sb "#808080" -fn "SourceCodePro-6"
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "#000000" -sb "#808080" -fn "SourceCodePro-10"
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -48,11 +48,11 @@ bindsym Control+q exec --no-startup-id playerctl previous
 # bindsym $mod+e layout toggle split
 
 # WORKSPACES
-set $ws1 ""
+set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 ""
-set $ws5 ""
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -83,11 +83,15 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 workspace $ws4 output DP-2
 workspace $ws5 output DVI-D-0
+workspace $ws6 output DP-2
+workspace $ws7 output DP-2
 
-for_window [class="Spotify"] move to workspace $ws4
-# for_window [class="Slack"] fullscreen enable
+for_window [class="Spotify"] move to workspace $ws4 split h
+for_window [class="Slack"] layout stacked
+assign [class="Spotify"] $ws4
 assign [class="discord"] $ws4
-assign [class="Slack"] $ws5
+assign [class="Slack"] $ws4
+assign [class="Vlc"] $ws7
 
 # RESIZE
 mode "resize" {
@@ -101,12 +105,15 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+s [class="Spotify"] focus; move left;
+
 exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144 --output DP-2 --mode 2560x1440 --rate 144
+exec --no-startup-id sudo ntpd -qg
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill ~/downloads/images/leaves.jpg
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id termite
-exec --no-startup-id firefox
+exec --no-startup-id chromium
 exec --no-startup-id spotify
 exec --no-startup-id discord

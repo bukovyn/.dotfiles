@@ -1,45 +1,38 @@
 [bar/primary]
 monitor = DP-4
 width = 100%
-height = 20
-
-background = #00000000
-foreground = #ccffffff
-
+height = 30
+background = #cc000000
+foreground = #ffffff
 line-color = ${bar/primary.background}
 line-size = 1
-
+border-color = #ffffff
 spacing = 2
-padding-right = 5
-module-margin = 1
+padding-left = 2.5
+padding-right = 3
+module-margin = 2
 
 font-0 = SourceCodeProMedium:size=10;2
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-1 = FontAwesome:style=Regular:pixelsize=12;4
+font-2 = Weather Icons:size=12;4
+font-3 = Material Icons:style=Regular:size=12;4
 
-modules-left = i3
-modules-right = cpu date
+modules-left = i3 cpu memory
+modules-center = now-playing
+modules-right = openvpn wired-network weather date
 
 [bar/secondary]
 monitor = DP-2
 width = 100%
 height = 20
-
 background = #00000000
-foreground = #ccffffff
-
+foreground = #ffffff
 line-color = ${bar/primary.background}
 line-size = 1
-
 spacing = 2
-padding-right = 5
-module-margin = 4
+padding-left = 2.5
 
-font-0 = SourceCodeProMedium:size=12;2
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-0 = SourceCodeProMedium:size=10;2
 
 modules-left = i3
 
@@ -47,33 +40,59 @@ modules-left = i3
 monitor = DVI-D-0
 width = 100%
 height = 20
-
 background = #00000000
-foreground = #ccffffff
-
+foreground = #ffffff
 line-color = ${bar/primary.background}
 line-size = 1
 
-spacing = 2
-padding-right = 5
-module-margin = 4
-
-font-0 = SourceCodeProMedium:size=12;2
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-0 = SourceCodeProMedium:size=10;2
 
 modules-left = i3
 
-[module/date]
-type = internal/date
-date = %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%I:%M%%{F-}
-date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%I:%M%%{F#666}:%%{F#fba922}%S%%{F-}
-
 [module/cpu]
 type = internal/cpu
-label = CPU %percentage%%
-interval = 1
+interval = 0.5
+format = CPU <bar-load>
+
+bar-load-width = 10
+bar-load-foreground-0 = #c1cb7f
+bar-load-foreground-1 = #d9c37f
+bar-load-foreground-2 = #e4a48a
+bar-load-foreground-3 = #ed9896
+bar-load-indicator = ■
+bar-load-indicator-font = 0
+bar-load-indicator-foreground = #55fdf6e3
+bar-load-fill = ■
+bar-load-fill-font = 0
+bar-load-empty = □
+bar-load-empty-font = 0
+bar-load-empty-foreground = #99586e75
+
+[module/date]
+type = internal/date
+date = %a. %b %d
+time = %I:%M
+label = %date% %time%
+format =  <label>
+
+[module/memory]
+type = internal/memory
+interval = 0.5
+format = RAM <bar-used>
+
+bar-used-width = 10
+bar-used-foreground-0 = #c1cb7f
+bar-used-foreground-1 = #d9c37f
+bar-used-foreground-2 = #e4a48a
+bar-used-foreground-3 = #ed9896
+bar-used-indicator = ■
+bar-used-indicator-font = 0
+bar-used-indicator-foreground = #55fdf6e3
+bar-used-fill = ■
+bar-used-fill-font = 0
+bar-used-empty = □
+bar-used-empty-font = 0
+bar-used-empty-foreground = #99586e75
 
 [module/i3]
 type = internal/i3
@@ -90,4 +109,28 @@ label-unfocused = %name%
 label-focused-underline = #ffffff
 label-focused-padding = 1
 label-unfocused-padding = 1
+
+[module/now-playing]
+type = custom/script
+exec = ~/.config/polybar/scripts/now_playing.sh
+interval = 1
+
+[module/openvpn]
+type = custom/script
+exec = ~/.config/polybar/scripts/openvpn.sh
+interval = 3
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/scripts/weather.sh
+interval = 600
+label-font = 3
+
+[module/wired-network]
+type = internal/network
+interface = enp2s0
+format-connected =  <label-connected
+format-packetloss = <animation-packetloss>
+label-connected = %upspeed:2% %downspeed:2%
+interval = 1
 
