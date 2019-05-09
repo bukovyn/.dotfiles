@@ -16,18 +16,21 @@ cmd () {
 	grep "^alias" ~/.zshrc | cut -d " " -f2-
 }
 
+BASH_SCRIPTS=~/scripts/bash
+SCREENSHOTS=~/screenshots
+
 alias ..="cd .."
 alias ag="ag --literal"
-alias capture="scrot -sz ~/screenshots/'$(date +%s)'.jpg"
+alias capture="scrot -sz $SCREENSHOTS/'$(date +%s)'.jpg"
 alias empty="find . -type d -empty"
 alias g="git"
 alias get="sudo pacman -S"
 alias la="ls -gohA --color=auto --group-directories-first"
 alias ll="ls -goh --color=auto --group-directories-first"
-alias owl="~/scripts/owl.sh"
-alias primary="~/scripts/primary_monitor.sh"
+alias owl="$BASH_SCRIPTS/owl.sh"
+alias primary="$BASH_SCRIPTS/primary_monitor.sh"
 alias remove="sudo pacman -Rns"
-alias screencast="~/scripts/screencast.sh"
-alias ss="~/scripts/audio_output.sh"
+alias screencast="$BASH_SCRIPTS/screencast.sh"
+alias ss="$BASH_SCRIPTS/audio_output.sh"
 alias update="sudo pacman -Syu"
 alias v="vim"
