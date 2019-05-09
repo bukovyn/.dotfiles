@@ -111,7 +111,7 @@ exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144 --output D
 exec --no-startup-id sudo ntpd -qg
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id compton
-exec --no-startup-id feh --bg-fill ~/images/leaves.jpg
+exec --no-startup-id feh --bg-fill ~/images/wallpaper.jpg
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id termite
 exec --no-startup-id chromium
