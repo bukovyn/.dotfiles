@@ -18,6 +18,7 @@ cmd () {
 
 alias ..="cd .."
 alias ag="ag --literal"
+alias capture="scrot -sz ~/screenshots/'$(date +%s)'.jpg"
 alias empty="find . -type d -empty"
 alias g="git"
 alias get="sudo pacman -S"
