@@ -1,6 +1,6 @@
 set $mod Mod1
 
-# SETTINGS
+# Settings
 font pango: SourceCodeProMedium 12px
 
 client.focused #000000 #000000 #ffffff #000000 #000000
@@ -10,18 +10,20 @@ client.focused_inactive #000000 #000000 #ffffff #000000 #000000
 for_window [class="^.*"] border pixel 1
 hide_edge_borders smart
 
-# gaps
 gaps inner 10
 gaps outer 0
 smart_gaps on
 
-# KEYBINDS
+# Keybinds
 bindsym $mod+Return exec --no-startup-id termite
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run -nb "#000000" -sb "#808080" -fn "SourceCodePro-10"
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+s [class="Spotify"] focus; move left
+bindsym $mod+q exec --no-startup-id amixer set Master -q 5%-
+bindsym $mod+e exec --no-startup-id amixer set Master -q 5%+
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -44,10 +46,10 @@ bindsym Control+q exec --no-startup-id playerctl previous
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+# bindsym $mod+t layout tabbed
+# bindsym $mod+w layout toggle split
 
-# WORKSPACES
+# Workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -93,7 +95,7 @@ assign [class="discord"] $ws4
 assign [class="Slack"] $ws4
 assign [class="Vlc"] $ws7
 
-# RESIZE
+# Resize
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         bindsym h resize shrink width 10 px or 10 ppt
@@ -104,8 +106,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-bindsym $mod+s [class="Spotify"] focus; move left;
 
 exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144 --output DP-2 --mode 2560x1440 --rate 144
 exec --no-startup-id sudo ntpd -qg
