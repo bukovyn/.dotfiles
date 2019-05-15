@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-color
@@ -23,6 +23,7 @@ alias ..="cd .."
 alias ag="ag --literal"
 alias capture="scrot -sz $SCREENSHOTS/'$(date +%s)'.jpg"
 alias empty="find . -type d -empty"
+alias fkeys="$BASH_SCRIPTS/f_keys.sh"
 alias g="git"
 alias get="sudo pacman -S"
 alias la="ls -gohA --color=auto --group-directories-first"

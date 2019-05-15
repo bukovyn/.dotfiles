@@ -16,6 +16,7 @@ smart_gaps on
 
 # Keybinds
 bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Shift+Return exec --no-startup-id exec termite; workspace $ws10
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run -nb "#000000" -sb "#808080" -fn "SourceCodePro-10"
 bindsym $mod+Shift+c reload
@@ -84,17 +85,22 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-workspace $ws4 output DP-2
-workspace $ws5 output DVI-D-0
-workspace $ws6 output DP-2
-workspace $ws7 output DP-2
+workspace $ws1 output DP-4
+workspace $ws2 output DP-4
+workspace $ws3 output DP-4
+workspace $ws4 output DP-4
+workspace $ws5 output DP-4
+workspace $ws6 output DP-4
+workspace $ws7 output DP-4
+workspace $ws8 output DP-4
+workspace $ws9 output DP-2
+workspace $ws10 output DVI-D-0
 
-for_window [class="Spotify"] move to workspace $ws4 split h
+for_window [class="Spotify"] move to workspace $ws9 split h
 for_window [class="Slack"] layout stacked
-assign [class="Spotify"] $ws4
-assign [class="discord"] $ws4
-assign [class="Slack"] $ws4
-assign [class="Vlc"] $ws7
+assign [class="Spotify"] $ws9
+assign [class="discord"] $ws9
+assign [class="Slack"] $ws9
 
 # Resize
 mode "resize" {
@@ -113,7 +119,7 @@ exec --no-startup-id sudo ntpd -qg
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill ~/images/wallpaper.jpg
-exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/single_monitor.sh
 exec --no-startup-id termite
 exec --no-startup-id chromium
 exec --no-startup-id spotify

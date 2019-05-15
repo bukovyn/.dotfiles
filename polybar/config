@@ -19,7 +19,7 @@ font-3 = Material Icons:style=Regular:size=12;4
 
 modules-left = i3 cpu memory
 modules-center = now-playing
-modules-right = openvpn wired-network volume weather date
+modules-right = openvpn wired-network weather date
 
 [bar/secondary]
 monitor = DP-2
