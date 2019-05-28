@@ -16,11 +16,8 @@ cmd () {
 	grep "^alias" "$HOME/.zshrc" | cut -d " " -f2-
 }
 
-SCREENSHOTS="$HOME/screenshots"
-
 alias ..="cd .."
 alias ag="ag --literal"
-alias capture="scrot -sz $SCREENSHOTS/'$(date +%s)'.jpg"
 alias empty="find . -type d -empty"
 alias g="git"
 alias get="sudo pacman -S"
