@@ -102,11 +102,14 @@ enable-click = false
 enable-scroll = false
 wrapping-scroll = false
 reverse-scroll = false
-label-focused = %index%
-label-unfocused = %index%
 label-focused-underline = #ffffff
+label-focused = %index%
 label-focused-padding = 1
+label-unfocused = %index%
 label-unfocused-padding = 1
+label-visible = %index%
+label-visible-padding = 1
+
 
 [module/now-playing]
 type = custom/script
