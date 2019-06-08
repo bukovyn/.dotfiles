@@ -1,0 +1,25 @@
+output HDMI-0
+off
+output DP-0
+off
+output DP-1
+off
+output DP-3
+off
+output DP-5
+off
+output DP-2
+mode 2560x1440
+pos 1080x0
+rate 144.00
+rotate inverted
+output DVI-D-0
+mode 1920x1080
+pos 0x1208
+rate 60.00
+rotate right
+output DP-4
+mode 2560x1440
+pos 1080x1448
+primary
+rate 144.00
