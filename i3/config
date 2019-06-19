@@ -26,8 +26,8 @@ bindsym $mod+z [class="Spotify"] focus; move left
 bindsym $mod+q exec --no-startup-id amixer -D pulse set Master -q 10%-
 bindsym $mod+e exec --no-startup-id amixer -D pulse set Master -q 10%+
 bindsym $mod+m exec --no-startup-id amixer -D pulse set Master 1+ toggle
-bindsym $mod+w exec --no-startup-id ~/bin/bash/f_keys.sh start
-bindsym $mod+s exec --no-startup-id ~/bin/bash/f_keys.sh stop
+bindsym $mod+s exec --no-startup-id maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
+bindsym $mod+Shift+s exec --no-startup-id ~/bin/bash/screenshot.sh
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down

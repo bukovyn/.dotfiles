@@ -1,4 +1,2 @@
 #!/bin/bash
 killall polybar
-~/.config/polybar/polybar.sh &> /dev/null
-feh --bg-fill ~/images/wallpaper.jpg
