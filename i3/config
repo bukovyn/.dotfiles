@@ -3,7 +3,7 @@ set $mod Mod1
 # Settings
 font pango: SourceCodeProMedium 12px
 
-client.focused #000000 #0000000 #ffffff #000000 #56846f
+client.focused #000000 #000000 #ffffff #000000 #56846f
 client.focused_inactive #000000 #000000 #ffffff #000000 #000000
 
 # disables title bars and borders
@@ -26,8 +26,8 @@ bindsym $mod+z [class="Spotify"] focus; move left
 bindsym $mod+q exec --no-startup-id amixer -D pulse set Master -q 10%-
 bindsym $mod+e exec --no-startup-id amixer -D pulse set Master -q 10%+
 bindsym $mod+m exec --no-startup-id amixer -D pulse set Master 1+ toggle
-bindsym $mod+w exec --no-startup-id "fkeys start"
-bindsym $mod+s exec --no-startup-id "fkeys stop"
+bindsym $mod+w exec --no-startup-id ~/bin/bash/f_keys.sh start
+bindsym $mod+s exec --no-startup-id ~/bin/bash/f_keys.sh stop
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -96,7 +96,7 @@ workspace $ws6 output DP-4
 workspace $ws7 output DP-4
 workspace $ws8 output DP-4
 workspace $ws9 output DP-4
-workspace $ws10 output DP-4
+workspace $ws10 output DVI-D-0
 
 for_window [class="Spotify"] move to workspace $ws4 split h
 for_window [class="Slack"] layout stacked
@@ -123,7 +123,7 @@ exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill ~/images/wallpaper.jpg
 exec --no-startup-id ~/.config/polybar/polybar.sh
-exec --no-startup-id termite
 exec --no-startup-id chromium
+exec --no-startup-id termite
 exec --no-startup-id spotify
 exec --no-startup-id discord
