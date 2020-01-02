@@ -1,4 +1,4 @@
-set $mod Mod1
+set $mod Mod4
 
 # Settings
 font pango: SourceCodeProMedium 12px
@@ -44,9 +44,9 @@ bindsym $mod+Shift+v split v
 
 bindsym $mod+f fullscreen toggle
 
-bindsym Control+Tab exec --no-startup-id playerctl play-pause
-bindsym Control+e exec --no-startup-id playerctl next
-bindsym Control+q exec --no-startup-id playerctl previous
+bindsym Control+Tab exec --no-startup-id playerctl -p spotify play-pause
+bindsym Control+e exec --no-startup-id playerctl -p spotify next
+bindsym Control+q exec --no-startup-id playerctl -p spotify previous
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -103,6 +103,7 @@ for_window [class="Slack"] layout stacked
 assign [class="Spotify"] $ws4
 assign [class="discord"] $ws4
 assign [class="Slack"] $ws4
+assign [class="obs"] $ws4
 assign [class="whats-app-nativefier-d52542"] $ws5
 
 # Resize
@@ -116,6 +117,10 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# disable mouse resizing
+bindsym --border button1 nop
+bindsym --whole-window $mod+button1 nop
 
 exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144 --output DP-2 --mode 2560x1440 --rate 144
 exec --no-startup-id sudo ntpd -qg
